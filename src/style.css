@@ -1,0 +1,31 @@
+body {
+  background:  #FAFAFA;
+  margin: 0;
+}
+.page-header {
+  background-color:#148563;
+  height: 50px;
+  width: 100%;
+  max-width: 1000px;
+  border-bottom: 1px solid #e9ebef;
+  display: block;
+  font-size: 35px;
+}
+.operation {
+  background-color: #FAFAFA;
+  height: 300px;
+  margin: 0;
+}
+.app {
+  background-color: #1d1e22;
+  height: 530px;
+  position: relative;
+}
+.console {
+  height: 58px;
+  background-color: #FAFAFA;
+}
+.btn-danger {
+  position: relative;
+  bottom: 0;
+}
