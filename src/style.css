@@ -1,6 +1,15 @@
+html {
+  background-image: linear-gradient(0deg, transparent calc(100% - 1px), #2ae9dfb0 calc(100% - 1px)),
+                    linear-gradient(90deg, transparent calc(100% - 1px), #2ae9dfb0 calc(100% - 1px));
+  background-size: 16px 16px;
+  background-repeat: repeat;
+  background-position: center center
+}
 body {
-  background:  #FAFAFA;
-  margin: 0;
+  background:  black;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
 }
 .page-header {
   background-color:#148563;
@@ -15,17 +24,34 @@ body {
   background-color: #FAFAFA;
   height: 300px;
   margin: 0;
+  font-size: 20px;
+  max-width: 1000px;
 }
-.app {
-  background-color: #1d1e22;
-  height: 530px;
+.pixi {
+  background-color: black;
+  height: 500px;
+  max-width: 1000px;
+  margin: 0;
+}
+.app-footer {
+  height: 40px;
+  background-color: black;
+  max-width: 1000px;
+  margin: 0;
   position: relative;
-}
-.console {
-  height: 58px;
-  background-color: #FAFAFA;
+  text-align: right;
 }
 .btn-danger {
   position: relative;
-  bottom: 0;
+  right: 10px;
+}
+.btn-primary {
+  position: relative;
+  right: 15px;
+}
+.footer {
+  text-align: center;
+  color: white;
+  height:85px;
+  background-color: #1d1e22d7;;
 }
