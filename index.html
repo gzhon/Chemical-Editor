@@ -1,23 +1,36 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="src/style.css">
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image" href="src/assets/logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>化学式　</title>
   </head>
   <body>
-    <header class="page-header">化学式</header>
-    <div class="operation"></div>
-    <div class="app">
+    <header class="page-header">
+      <!-- ロゴ画像　挿入
+      <img src="src/assets/logo.png">
+      -->
+      化学式
+    </header>
+    <div class="operation">
+      オンライン上で簡単に構造式を作成できるサイトです。
+      <br>
+      テンプレート等から簡単にドラッグ&ドロップで色々な構造式が作成出来ます。
+      <br>
+      作成した構造式は画像にして、ダウンロードも出来ます。
+    </div>
+    <canvas id="pixi" class="pixi">このブラウザでは動作しません。推進ブラウザ(chrome)でお使い下さい。</canvas>
+    <div class="app-footer">
       <button type="button" class="btn btn-primary">画像(PNG形式)にしてダウンロード</button>
       <button type="button" class="btn btn-danger">画面をクリア</button>
     </div>
-    <div class="console">
-      
-    </div>
+    <footer class="footer">
+      <br>
+      制作 gzhon  github: <a href="https://github.com/gzhon">https://github.com/gzhon</a>
+    </footer>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
