@@ -3,7 +3,7 @@ html {
                     linear-gradient(90deg, transparent calc(100% - 1px), #2ae9dfb0 calc(100% - 1px));
   background-size: 16px 16px;
   background-repeat: repeat;
-  background-position: center center
+  background-position: center center;
 }
 body {
   background:  black;
