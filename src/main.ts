@@ -7,11 +7,14 @@ window.onload = () =>{
   const delete_btn = document.getElementById('delete');
   const chemica_add = document.getElementById('chemic_add');
   const down_load_btn = document.getElementById('download');
+  const canvas = document.getElementById('pixi');
 
-  if(delete_btn==null||down_load_btn==null||chemica_add==null) return
+  if(delete_btn==null||down_load_btn==null||chemica_add==null||canvas==null) return
 
   delete_btn.onclick = pixi_delete
   down_load_btn.onclick = pixi_delete
+  canvas.width = canvas.clientWidth
+  canvas.height = 500;
   const app = new App()
 
   chemica_add.onclick = app.add_chemical
