@@ -44,8 +44,6 @@ body {
 }
 .pixi {
   background-color: black;
-  height: 500px;
-  max-width: 1000px;
   margin: 0;
 }
 .app-footer {
