@@ -1,5 +1,4 @@
 import * as PIXI from 'pixi.js';
-import { Application } from 'pixi.js';
 import { DragText } from './DragText'
 
 window.onload = () =>{
@@ -30,23 +29,27 @@ class App {
     const app_id = document.getElementById('pixi')
     if(app_id==null) return
     const app_width = app_id.clientWidth;
-    this.pixi = new Application(
+    this.pixi = new PIXI.Application(
       {
         width:app_width,
         height:500,
-        background:"red",
+        background:"black",
         // @ts-ignore
         view:app_id,
         resizeTo:app_id
       }
     )
+    let dragText = new DragText("H");
+    this.pixi.stage.addChild(dragText);
+    //this.chemicals.push(dragText);
   }
   add_chemical(){
+
     const chemical_type = document.getElementById('chemicas')
     if(chemical_type==null) return;
     let dragText = new DragText("H");
-    this.chemicals.push(dragText);
     this.pixi.stage.addChild(dragText);
+    this.chemicals.push(dragText);
     //@ts-ignore
     console.log(chemical_type.value)
   }
