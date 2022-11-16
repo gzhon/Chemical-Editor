@@ -15,7 +15,7 @@
       -->
       化学式
     </header>
-    <div class="infos">
+    <div class="infos" id="infos">
       オンライン上で簡単に構造式を作成できるサイトです。
       <br>
       テンプレート等から簡単にドラッグ&ドロップで色々な構造式が作成出来ます。
@@ -32,7 +32,9 @@
       </select>
       <button type="button" class="btn btn-primary" id="chemic_add">画面に追加</button>
     </div>
-    <canvas id="pixi" class="pixi">このブラウザでは動作しません。推進ブラウザ(chrome)でお使い下さい。</canvas>
+    <canvas id="pixi" class="pixi" height="500">
+      このブラウザでは動作しません。推奨ブラウザ(chrome)でお使い下さい。
+    </canvas>
     <div class="app-footer">
       <button type="button" class="btn btn-primary" id="download">画像(PNG形式)にしてダウンロード</button>
       <button type="button" class="btn btn-danger" id="delete">画面をクリア</button>
