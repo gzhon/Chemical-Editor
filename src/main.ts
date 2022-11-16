@@ -7,14 +7,15 @@ window.onload = () =>{
   const delete_btn = document.getElementById('delete');
   const chemica_add = document.getElementById('chemic_add');
   const down_load_btn = document.getElementById('download');
+  const window = document.getElementById('infos');
   const canvas = document.getElementById('pixi');
 
-  if(delete_btn==null||down_load_btn==null||chemica_add==null||canvas==null) return
+  if(delete_btn==null||down_load_btn==null||chemica_add==null||canvas==null||window==null) return
 
   delete_btn.onclick = pixi_delete
   down_load_btn.onclick = pixi_delete
-  canvas.width = canvas.clientWidth
-  canvas.height = 500;
+  //@ts-ignore
+  canvas.width = window.clientWidth
   const app = new App()
 
   chemica_add.onclick = app.add_chemical
@@ -22,6 +23,7 @@ window.onload = () =>{
 class App {
 
   private pixi!:PIXI.Application;
+  private chemicals!:DragText[]
 
   constructor(){
 
@@ -31,7 +33,7 @@ class App {
     this.pixi = new Application(
       {
         width:app_width,
-        height:530,
+        height:500,
         background:"red",
         // @ts-ignore
         view:app_id,
@@ -40,12 +42,13 @@ class App {
     )
   }
   add_chemical(){
-    let chemic_type = document.getElementById('chemicas')
-    if(chemic_type==null) return;
-    const h = new DragText("H")
-    this.pixi.stage.addChild(h)
+    const chemical_type = document.getElementById('chemicas')
+    if(chemical_type==null) return;
+    let dragText = new DragText("H");
+    this.chemicals.push(dragText);
+    this.pixi.stage.addChild(dragText);
     //@ts-ignore
-    console.log(chemic_type.value)
+    console.log(chemical_type.value)
   }
 }
 function pixi_delete(){
